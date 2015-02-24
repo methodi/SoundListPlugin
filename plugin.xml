@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="kr.method.papaya.SoundListPlugin"
+        version="0.1.0">
+
+	<name>SoundListPlugin</name>
+	<author>June PARK</author>
+	  
+	<description>
+		PhoneGap plugin to Papaya Chatd
+	</description>
+
+	<license>MIT</license>
+	<keywords>phonegap,android,immortal,service,zombie,papaya,chatd</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0"/>
+	</engines>
+
+	<js-module src="www/SoundListPlugin.js" name="SoundListPlugin">
+		<clobbers target="SoundListPlugin" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="SoundListPlugin" >
+				<param name="android-package" value="kr.method.papaya.SoundListPlugin"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/kr/method/papaya/SoundListPlugin.java" target-dir="src/kr/method/papaya/" />
+		
+	</platform>
+</plugin>
